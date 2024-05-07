@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oosthuizen Attorneys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Video background container -->
+        <div class="video-container">
+            <video autoplay muted loop class="header-video" id="headerVideo">
+                <source src="v1h.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+        <!-- Header content -->
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="1.png" alt="Oosthuizen Attorneys Logo">
+                </div>
+                <div class="site-title">
+                    <h1>OOSTHUIZEN ATTORNEYS</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <!-- Add your navigation links here -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <body>
+        <div class="container">
+            <h1 class="services-heading"></h1>
+        <div class="service-buttons">
+            <a href="index.html" class="contact-button">Our Services </a>
+            <a href="about.html" class="contact-button">About Us</a>
+        </div>
+            <p></p>
+            <form id="emailForm" action="send_email.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="service" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="Divorce">Divorce</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Children's Court">Children's Court</option>
+                    <option value="Domestic Violence">Domestic Violence</option>
+                    <option value="Harassment">Harassment</option>
+                    <option value="Civil Litigation">Civil Litigation</option>
+                    <option value="Criminal Law">Criminal Law</option>
+                    <option value="Bail Applications">Bail Applications</option>
+                </select>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Email</button>
+            </form>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,367 @@
+/* Reset default margin and padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff9f9;
+    box-sizing: border-box; /* Ensure padding and border are included in total width/height */
+    background-image: url('x5.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Example font family */
+    color: rgb(0, 0, 0); /* Set text color to white */
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    color: #fef3f3; /* Set text color */
+    text-align: center;
+    padding: 20px 0; /* Adjust padding */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place video behind header content */
+}
+
+.header-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-container {
+    position: relative;
+    z-index: 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust logo size */
+}
+
+.site-title h1 {
+    font-family: "Arial Black", Arial, sans-serif; /* Use Arial Black as the primary font */
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Set font weight to bold */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
+}
+
+.navigation {
+    display: none; /* Hide navigation by default */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .site-title h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    .navigation {
+        display: block; /* Display navigation on smaller screens */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.site-title h1 {
+    font-family: "Arial Black", Helvetica, sans-serif; /* Use Arial Black as the primary font, fallback to Helvetica, then sans-serif */
+    font-size: 25px; /* Adjust font size as needed */
+    font-weight: bold; /* Set font weight to bold */
+    color: #ffffff; /* Set initial text color to white */
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),  
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 15px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 1); /* Set glowing effect with multiple layers */
+
+    /* Animation effect */
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.5),  
+            0 0 10px rgba(255, 255, 255, 0.7),
+            0 0 15px rgb(54, 33, 136),
+            0 0 20px rgb(43, 32, 160); /* Initial glowing effect */
+    }
+    100% {
+        text-shadow:
+            0 0 10px rgba(44, 69, 254, 0.7),
+            0 0 20px rgb(66, 110, 232),
+            0 0 30px rgb(47, 22, 130),
+            0 0 40px rgba(255, 255, 255, 1); /* Stronger glowing effect at 100% */
+    }
+}
+
+/* Style for each section containing text */
+.about-us section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hide the sections */
+    animation: slideInFromLeft 2s ease forwards; /* Apply slide-in animation */
+}
+
+/* Heading style within each section */
+.about-us section h2 {
+    color: #0127ff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph style within each section */
+.about-us section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0; /* Start with opacity 0 (hidden) */
+        transform: translateX(-50px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 (fully visible) */
+        transform: translateX(0); /* Slide in to the original position */
+    }
+}
+
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust logo size for smaller screens */
+}
+
+.navigation {
+    display: none; /* Hide navigation by default on small screens */
+}
+
+nav {
+    flex: 1; /* Grow to fill available space */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 10px; /* Adjust spacing */
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; /* Decrease font size for smaller screens */
+    padding: 8px; /* Adjust padding */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+.service {
+    text-align: center; /* Center align the buttons */
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3c67e9;
+    border-radius: 5px;
+    border: 2px solid #2353ef;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #4800fd;
+    border-color: #f9feff;
+}
+
+/* Show navigation in a mobile-friendly manner */
+@media (max-width: 768px) {
+    .navigation {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 10px; /* Add space between logo and navigation */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add vertical space between navigation items */
+    }
+
+    .service {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgb(0, 13, 255);
+    width: calc(50% - 20px); /* Two-column layout with gap */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    opacity: 0; /* Initially hide the service elements */
+    animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 (hidden) */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 (fully visible) */
+    }
+}
+
+/* Apply staggered delays to each service element */
+.service:nth-child(1) { animation-delay: 0.5s; }
+.service:nth-child(2) { animation-delay: 1s; }
+.service:nth-child(3) { animation-delay: 1.5s; }
+.service:nth-child(4) { animation-delay: 2s; }
+.service:nth-child(5) { animation-delay: 2.5s; }
+.service:nth-child(6) { animation-delay: 3s; }
+.service:nth-child(7) { animation-delay: 3.5s; }
+.service:nth-child(8) { animation-delay: 4s; }
+
+.bubble {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background-color: #639fdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bubble span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+
+.service h3 {
+    font-size: 16px; /* Adjust heading size for smaller screens */
+}
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #767779;
+    color: #ffffff;
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
